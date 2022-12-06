@@ -92,6 +92,16 @@ public class Teacher {
 	public void setCourse(List<Course> course) {
 		this.course = course;
 	}
+	
+	public void add(Course tempcourse) {
+		if(course == null) {
+			course = new ArrayList<>();
+		}
+		
+		course.add(tempcourse);
+		
+		tempcourse.setTeacher(this);
+	}
 
 	@Override
 	public String toString() {
